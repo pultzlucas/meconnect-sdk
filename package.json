@@ -1,0 +1,29 @@
+{
+  "name": "meconnect-sdk",
+  "version": "1.0.4",
+  "description": "MeConnect development kit",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc --declaration"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pultzlucas/meconnect.git"
+  },
+  "keywords": ["meconnect", "sdk"],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pultzlucas/meconnect/issues"
+  },
+  "homepage": "https://github.com/pultzlucas/meconnect#readme",
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.16.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.21",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.2"
+  }
+}
