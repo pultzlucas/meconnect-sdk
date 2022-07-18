@@ -1,4 +1,5 @@
 import { RequestAPI } from '../core'
+import User from './objects/User'
 
 class CustomerModel {
     private endpoint: string
@@ -7,7 +8,7 @@ class CustomerModel {
         this.endpoint = '/users/customer'
     }
 
-    async create(params: any) {
+    async create(params: User) {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',

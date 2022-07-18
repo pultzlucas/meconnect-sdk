@@ -1,4 +1,5 @@
 import { RequestAPI } from '../core'
+import Vendor from './objects/Vendor'
 
 class VendorModel {
     private endpoint: string
@@ -17,7 +18,7 @@ class VendorModel {
         })
     }
 
-    async create(params: any) {
+    async create(params: Vendor) {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
