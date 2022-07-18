@@ -35,6 +35,49 @@ class VendorModel {
         })
     }
 
+    async getByTags(tags: string[], token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bytags`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            },
+            params: {
+                tags: tags.join(',')
+            }
+        })
+    }
+
+    async getByCommercial(comm: number, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bycomm/${comm}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    async getByCep(cep: string, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bycep/${cep}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    async getByCnpj(cnpj: string, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bycnpj/${cnpj}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
     async all(token: string) {
         return RequestAPI({
             route: this.endpoint,

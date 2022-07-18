@@ -33,6 +33,39 @@ class ProductModel {
         })
     }
 
+    async getByTags(tags: string[], token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bytags`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            },
+            params: {
+                tags: tags.join(',')
+            }
+        })
+    }
+
+    async getByPrice(price: number, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/byprice/${price}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    async getByDescription(desc: string, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bydesc/${desc}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
     async all(token: string) {
         return RequestAPI({
             route: this.endpoint,

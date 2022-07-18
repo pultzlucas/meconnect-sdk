@@ -12,7 +12,7 @@
     "url": "git+https://github.com/pultzlucas/meconnect.git"
   },
   "keywords": ["meconnect", "sdk"],
-  "author": "",
+  "author": "pultzlucas",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/pultzlucas/meconnect/issues"

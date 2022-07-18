@@ -33,6 +33,29 @@ class PostModel {
         })
     }
 
+    async getByTags(tags: string[], token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bytags`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            },
+            params: {
+                tags: tags.join(',')
+            }
+        })
+    }
+
+    async getByTitle(title: string, token: string) {
+        return RequestAPI({
+            route: `${this.endpoint}/bytitle/${title}`,
+            method: 'GET',
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
     async all(token: string) {
         return RequestAPI({
             route: this.endpoint,
