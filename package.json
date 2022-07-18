@@ -1,4 +1,6 @@
-@react-native-async-storage/async-storage",
+{
+  "name": "meconnect-sdk",
+  "version": "1.0.6",
   "description": "MeConnect development kit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
