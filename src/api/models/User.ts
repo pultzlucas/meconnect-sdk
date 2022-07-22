@@ -1,13 +1,11 @@
 import { RequestAPI } from '../core'
 
 class UserModel {
-    static allUsers(token: string) {
+    static allUsers() {
         return RequestAPI({
             route: '/users',
             method: 'GET',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 }

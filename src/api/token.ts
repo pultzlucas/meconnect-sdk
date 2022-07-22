@@ -7,5 +7,9 @@ export default {
 
     async get() {
         return AsyncStorage.getItem('@MCON_API_TOKEN')
+    },
+
+    async isset() {
+        return !!(await this.get())
     }
 }

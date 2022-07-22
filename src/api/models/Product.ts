@@ -19,81 +19,68 @@ class ProductModel {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
-            params
+            params,
+            token: true
         })
     }
 
-    async get(id: number, token: string) {
+    async get(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'GET',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async getByTags(tags: string[], token: string) {
+    async getByTags(tags: string[]) {
         return RequestAPI({
             route: `${this.endpoint}/bytags`,
             method: 'GET',
-            headers: {
-                'Authorization': token
-            },
             params: {
                 tags: tags.join(',')
-            }
+            },
+            token: true
         })
     }
 
-    async getByPrice(price: number, token: string) {
+    async getByPrice(price: number) {
         return RequestAPI({
             route: `${this.endpoint}/byprice/${price}`,
             method: 'GET',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async getByDescription(desc: string, token: string) {
+    async getByDescription(desc: string) {
         return RequestAPI({
             route: `${this.endpoint}/bydesc/${desc}`,
             method: 'GET',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async all(token: string) {
+    async all() {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async update(id: number, params: any, token: string) {
+    async update(id: number, params: any) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'PUT',
             params,
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async delete(id: number, token: string) {
+    async delete(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'DELETE',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 }

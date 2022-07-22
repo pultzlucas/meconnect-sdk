@@ -7,33 +7,27 @@ class NotificationModel {
         this.endpoint = '/notifications'
     }
 
-    async get(id: number, token: string) {
+    async get(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'GET',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async all(token: string) {
+    async all() {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 
-    async delete(id: number, token: string) {
+    async delete(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'DELETE',
-            headers: {
-                'Authorization': token
-            }
+            token: true
         })
     }
 }
