@@ -16,7 +16,7 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
 
     if (token) {
         if (!(await AccessToken.isset())) throw 'Api access token is not setted'
-        requestConfig.headers = { 'Authorization': `Bearer ${AccessToken.get()}` }
+        requestConfig.headers = { 'Authorization': `Bearer ${await AccessToken.get()}` }
     }
 
     if (files.length > 0) {
