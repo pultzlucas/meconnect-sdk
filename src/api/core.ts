@@ -28,7 +28,13 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
         requestConfig.body = formData
     }
 
-    const url = `${config.baseURL}${route}?${getParamsString(params)}`
+    const url = params ?
+        `${config.baseURL}${route}?${getParamsString(params)}` :
+        `${config.baseURL}${route}`
+
+    console.log(config)
+    console.log(url)
+
     const res = await fetch(url, requestConfig)
     const data = await res.json()
 
@@ -39,7 +45,7 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
 }
 
 function getParamsString(params: any): string {
-    if(typeof params !== 'object') return ''
+    if (typeof params !== 'object') return ''
     return Object.keys(params)
         .map(key => {
             let param = params[key]
