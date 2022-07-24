@@ -39,6 +39,7 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
 }
 
 function getParamsString(params: any): string {
+    if(typeof params !== 'object') return ''
     return Object.keys(params)
         .map(key => {
             let param = params[key]
