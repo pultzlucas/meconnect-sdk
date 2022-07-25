@@ -7,8 +7,10 @@ import token from './token'
 import UserModel from "./models/User";
 import CustomerModel from "./models/Customer";
 import VendorModel from "./models/Vendor";
+import * as config from './config'
 
 export default {
+    config,
     token,
     login,
     db: {
