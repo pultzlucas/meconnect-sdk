@@ -1,4 +1,4 @@
-import config from './config'
+import { Config } from './config'
 import File from './models/objects/File'
 import AccessToken from './token'
 
@@ -29,10 +29,10 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
     }
 
     const url = params ?
-        `${config.baseURL}${route}?${getParamsString(params)}` :
-        `${config.baseURL}${route}`
+        `${Config.apiDomain}${route}?${getParamsString(params)}` :
+        `${Config.apiDomain}${route}`
 
-    console.log(config)
+    console.log(Config)
     console.log(url)
 
     const res = await fetch(url, requestConfig)
