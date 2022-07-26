@@ -32,9 +32,6 @@ export async function RequestAPI({ route = '', method = 'GET', params, token = f
         `${Config.apiDomain}${route}?${getParamsString(params)}` :
         `${Config.apiDomain}${route}`
 
-    console.log(Config)
-    console.log(url)
-
     const res = await fetch(url, requestConfig)
     const data = await res.json()
 
