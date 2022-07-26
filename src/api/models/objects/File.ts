@@ -11,10 +11,10 @@ export default class File implements FileI{
     }
 
     toFormData() {
-        return JSON.stringify({
+        return JSON.parse(JSON.stringify({
             name: this.name,
             uri: this.uri,
             type: this.type
-        })
+        }))
     }
 }
