@@ -5,7 +5,7 @@ export default {
         return ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
             aspect: [4, 3],
-            quality: 1,
+            quality: 0.5,
         });
     }
 }
