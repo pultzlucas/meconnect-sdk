@@ -5,7 +5,7 @@ Kit de desenvolvimento para plataforma MeConnect
 ## Instalação
 
 ````shell
-$ yarn add meconnect-sdk
+$ expo install meconnect-sdk
 ````
 
 ## Módulos do SDK
