@@ -120,6 +120,9 @@ Api.db.notifications.all(token)
 // deleta uma notificação
 Api.db.notifications.delete(id, token)
 
+// atualiza foto de perfil da empresa
+Api.db.vendors.updateProfilePhoto(id, uri_da_imagem)
+
 ````
 Fazendo login no back-end
 
