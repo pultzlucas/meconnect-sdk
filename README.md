@@ -42,6 +42,6 @@ Módulo para manipular arquivos de mídia da galeria do usuário
 ````javascript
 import { Media } from 'meconnect-sdk'
 
-// Abre a galeria do usuário para escolher uma imagem
+// Abre a galeria do usuário para escolher uma imagem e retorna essa imagem
 Media.pickImage()
 ````
