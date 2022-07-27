@@ -28,9 +28,20 @@ Inclui todas as principais cores que fazem parte do visual da plataforma
 import { Colors } from 'meconnect-sdk'
 
 Colors.DarkOrange // #F5803E
-Colors.MiddleOrange: // #FFA245
-Colors.LightOrange: // #FFCCA0
-Colors.DarkGray: // #666666
-Colors.LightGray: // #CCCCCC
-Colors.Black: // #333333
+Colors.MiddleOrange // #FFA245
+Colors.LightOrange // #FFCCA0
+Colors.DarkGray // #666666
+Colors.LightGray // #CCCCCC
+Colors.Black // #333333
+````
+
+### Media
+
+Módulo para manipular arquivos de mídia da galeria do usuário
+
+````javascript
+import { Media } from 'meconnect-sdk'
+
+// Abre a galeria do usuário para escolher uma imagem
+Media.pickImage()
 ````
