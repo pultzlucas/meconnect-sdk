@@ -1,10 +1,15 @@
 import * as ImagePicker from 'expo-image-picker';
 
+interface ImageConfig {
+    aspect: [number, number]
+}
+
 export default {
-    pickImage() {
+    pickImage({ aspect }: ImageConfig) {
         return ImagePicker.launchImageLibraryAsync({
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
-            aspect: [4, 3],
+            allowsEditing: true,
+            aspect,
             quality: 0.5,
         });
     }
