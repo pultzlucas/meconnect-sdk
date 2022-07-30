@@ -88,7 +88,7 @@ class VendorModel {
 
     // Media routes
 
-    async changeProfilePhoto(id: number, photoUri: string) {
+    async setProfilePhoto(id: number, photoUri: string) {
         const file = new File('image.png', photoUri, ImageType.Png, 'image')
         return RequestAPI({
             route: `${this.endpoint}/${id}/photo`,
@@ -98,7 +98,7 @@ class VendorModel {
         })
     }
 
-    async changeProfileBanner(id: number, photoUri: string) {
+    async setProfileBanner(id: number, photoUri: string) {
         const file = new File('image.png', photoUri, ImageType.Png, 'image')
         return RequestAPI({
             route: `${this.endpoint}/${id}/banner`,

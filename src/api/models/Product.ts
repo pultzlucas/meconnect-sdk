@@ -1,4 +1,6 @@
 import { RequestAPI } from '../core'
+import File from './objects/File'
+import { ImageType } from './objects/ImageType'
 
 interface Product {
     company_id: number
@@ -81,6 +83,16 @@ class ProductModel {
             route: `${this.endpoint}/${id}`,
             method: 'DELETE',
             token: true
+        })
+    }
+
+    async setPhoto(id: number, photoUri: string) {
+        const file = new File('image.png', photoUri, ImageType.Png, 'image')
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/photo`,
+            method: 'POST',
+            token: true,
+            files: [file]
         })
     }
 }
