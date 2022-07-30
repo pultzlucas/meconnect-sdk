@@ -97,6 +97,17 @@ class VendorModel {
             files: [file]
         })
     }
+
+    async changeProfileBanner(id: number, photoUri: string) {
+        const file = new File('image.png', photoUri, ImageType.Png, 'image')
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/banner`,
+            method: 'POST',
+            token: true,
+            files: [file]
+        })
+    }
+    
 }
 
 export default VendorModel
