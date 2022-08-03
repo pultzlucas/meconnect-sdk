@@ -24,39 +24,39 @@ import { Api } from 'meconnect-sdk'
 // users
 Api.db.users.all(token) // retorna todos os usuários cadastrados
 
-// CLIENTS
+// CUSTOMERS
 
 // cria um cliente
-Api.db.clients.create(params) 
+Api.db.customer.create(params) 
 
 // retorna um cliente a partir do ID
-Api.db.clients.get(id, token) 
+Api.db.customer.get(id, token) 
 
 // retorna todos os clientes do banco
-Api.db.clients.all(token)
+Api.db.customer.all(token)
 
 // modifica um cliente do banco
-Api.db.clients.update(id, params, token)
+Api.db.customer.update(id, params, token)
 
 // deleta um cliente do banco
-Api.db.clients.delete(id, token)
+Api.db.customer.delete(id, token)
 
-// COMPANIES
+// VENDORS
 
 // cria uma empresa
-Api.db.companies.create(params) 
+Api.db.vendors.create(params) 
 
 // retorna uma empresa a partir do ID
-Api.db.companies.get(id, token)
+Api.db.vendors.get(id, token)
 
 // retorna todas as empresas do banco
-Api.db.companies.all(token)
+Api.db.vendors.all(token)
 
 // modifica uma empresa do banco
-Api.db.companies.update(id, params, token)
+Api.db.vendors.update(id, params, token)
 
 // deleta uma empresa do banco
-Api.db.companies.delete(id, token)
+Api.db.vendors.delete(id, token)
 
 // seta foto de perfil da empresa
 Api.db.vendors.setProfilePhoto(id, uri_da_imagem)
