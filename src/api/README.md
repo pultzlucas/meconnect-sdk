@@ -30,16 +30,16 @@ Api.db.users.all() // retorna todos os usuários cadastrados
 Api.db.customer.create(params) 
 
 // retorna um cliente a partir do ID
-Api.db.customer.get(id) 
+Api.db.customer.get(id_cliente) 
 
 // retorna todos os clientes do banco
 Api.db.customer.all()
 
 // modifica um cliente do banco
-Api.db.customer.update(id, params)
+Api.db.customer.update(id_cliente, campos)
 
 // deleta um cliente do banco
-Api.db.customer.delete(id)
+Api.db.customer.delete(id_cliente)
 
 // VENDORS
 
@@ -47,36 +47,36 @@ Api.db.customer.delete(id)
 Api.db.vendors.create(params) 
 
 // retorna uma empresa a partir do ID
-Api.db.vendors.get(id)
+Api.db.vendors.get(id_empresa)
 
 // retorna todas as empresas do banco
 Api.db.vendors.all()
 
 // modifica uma empresa do banco
-Api.db.vendors.update(id, params)
+Api.db.vendors.update(id_empresa, campos)
 
 // deleta uma empresa do banco
-Api.db.vendors.delete(id)
+Api.db.vendors.delete(id_empresa)
 
 // seta foto de perfil da empresa
-Api.db.vendors.setProfilePhoto(id, uri_da_imagem)
+Api.db.vendors.setProfilePhoto(id_empresa, uri_da_imagem)
 
 // CONNECTIONS
 
 // cria uma conexão
-Api.db.connections.create(params)
+Api.db.connections.create(campos)
 
 // retorna uma conexão a partir do ID
-Api.db.connections.get(id)
+Api.db.connections.get(id_conexao)
 
 // retorna todas as conexões do banco
 Api.db.connections.all()
 
 // modifica uma conexão
-Api.db.connections.update(id, params)
+Api.db.connections.update(id_conexao, campos)
 
 // delete uma conexão
-Api.db.connections.delete(id)
+Api.db.connections.delete(id_conexao)
 
 // POSTS
 
@@ -84,19 +84,19 @@ Api.db.connections.delete(id)
 Api.db.posts.create(params)
 
 // retorna um post a partir do ID
-Api.db.posts.get(id)
+Api.db.posts.get(id_post)
 
 // retorna todos os posts do banco
 Api.db.posts.all()
 
 // modifica um post
-Api.db.posts.update(id, params)
+Api.db.posts.update(id_post, campos)
 
 // deleta um post
 Api.db.posts.delete()
 
 // seta mídia do post
-Api.db.products.setImage(id, uri_da_imagem)
+Api.db.products.setImage(id_post, uri_da_imagem)
 
 // PRODUCTS
 
@@ -104,30 +104,30 @@ Api.db.products.setImage(id, uri_da_imagem)
 Api.db.products.create(params)
 
 // retorna um produto a partir do ID
-Api.db.products.get(id)
+Api.db.products.get(id_produto)
 
 // retorna todos os produtos do banco
 Api.db.products.all()
 
 // modifica um produto
-Api.db.products.update(id, params)
+Api.db.products.update(id_produto, campos)
 
 // deleta um produto
-Api.db.products.delete(id)
+Api.db.products.delete(id_produto)
 
 // seta foto do produto
-Api.db.products.setPhoto(id, uri_da_imagem)
+Api.db.products.setPhoto(id_produto, uri_da_imagem)
 
 // NOTIFICATIONS
 
 // retorna uma notificação a partir do ID
-Api.db.notifications.get(id)
+Api.db.notifications.get(id_produto)
 
 // retorna todas as notificações do banco
 Api.db.notifications.all()
 
 // deleta uma notificação
-Api.db.notifications.delete(id)
+Api.db.notifications.delete(id_produto)
 
 ````
 Fazendo login no back-end
