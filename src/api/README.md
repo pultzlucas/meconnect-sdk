@@ -22,7 +22,7 @@ Executando ações no banco de dados
 import { Api } from 'meconnect-sdk'
 
 // users
-Api.db.users.all(token) // retorna todos os usuários cadastrados
+Api.db.users.all() // retorna todos os usuários cadastrados
 
 // CUSTOMERS
 
@@ -30,16 +30,16 @@ Api.db.users.all(token) // retorna todos os usuários cadastrados
 Api.db.customer.create(params) 
 
 // retorna um cliente a partir do ID
-Api.db.customer.get(id, token) 
+Api.db.customer.get(id) 
 
 // retorna todos os clientes do banco
-Api.db.customer.all(token)
+Api.db.customer.all()
 
 // modifica um cliente do banco
-Api.db.customer.update(id, params, token)
+Api.db.customer.update(id, params)
 
 // deleta um cliente do banco
-Api.db.customer.delete(id, token)
+Api.db.customer.delete(id)
 
 // VENDORS
 
@@ -47,16 +47,16 @@ Api.db.customer.delete(id, token)
 Api.db.vendors.create(params) 
 
 // retorna uma empresa a partir do ID
-Api.db.vendors.get(id, token)
+Api.db.vendors.get(id)
 
 // retorna todas as empresas do banco
-Api.db.vendors.all(token)
+Api.db.vendors.all()
 
 // modifica uma empresa do banco
-Api.db.vendors.update(id, params, token)
+Api.db.vendors.update(id, params)
 
 // deleta uma empresa do banco
-Api.db.vendors.delete(id, token)
+Api.db.vendors.delete(id)
 
 // seta foto de perfil da empresa
 Api.db.vendors.setProfilePhoto(id, uri_da_imagem)
@@ -67,16 +67,16 @@ Api.db.vendors.setProfilePhoto(id, uri_da_imagem)
 Api.db.connections.create(params)
 
 // retorna uma conexão a partir do ID
-Api.db.connections.get(id, token)
+Api.db.connections.get(id)
 
 // retorna todas as conexões do banco
-Api.db.connections.all(token)
+Api.db.connections.all()
 
 // modifica uma conexão
-Api.db.connections.update(id, params, token)
+Api.db.connections.update(id, params)
 
 // delete uma conexão
-Api.db.connections.delete(id, token)
+Api.db.connections.delete(id)
 
 // POSTS
 
@@ -84,13 +84,13 @@ Api.db.connections.delete(id, token)
 Api.db.posts.create(params)
 
 // retorna um post a partir do ID
-Api.db.posts.get(id, token)
+Api.db.posts.get(id)
 
 // retorna todos os posts do banco
-Api.db.posts.all(token)
+Api.db.posts.all()
 
 // modifica um post
-Api.db.posts.update(id, params, token)
+Api.db.posts.update(id, params)
 
 // deleta um post
 Api.db.posts.delete()
@@ -104,16 +104,16 @@ Api.db.products.setImage(id, uri_da_imagem)
 Api.db.products.create(params)
 
 // retorna um produto a partir do ID
-Api.db.products.get(id, token)
+Api.db.products.get(id)
 
 // retorna todos os produtos do banco
-Api.db.products.all(token)
+Api.db.products.all()
 
 // modifica um produto
-Api.db.products.update(id, params, token)
+Api.db.products.update(id, params)
 
 // deleta um produto
-Api.db.products.delete(id, token)
+Api.db.products.delete(id)
 
 // seta foto do produto
 Api.db.products.setPhoto(id, uri_da_imagem)
@@ -121,13 +121,13 @@ Api.db.products.setPhoto(id, uri_da_imagem)
 // NOTIFICATIONS
 
 // retorna uma notificação a partir do ID
-Api.db.notifications.get(id, token)
+Api.db.notifications.get(id)
 
 // retorna todas as notificações do banco
-Api.db.notifications.all(token)
+Api.db.notifications.all()
 
 // deleta uma notificação
-Api.db.notifications.delete(id, token)
+Api.db.notifications.delete(id)
 
 ````
 Fazendo login no back-end
