@@ -58,6 +58,9 @@ Api.db.companies.update(id, params, token)
 // deleta uma empresa do banco
 Api.db.companies.delete(id, token)
 
+// seta foto de perfil da empresa
+Api.db.vendors.setProfilePhoto(id, uri_da_imagem)
+
 // CONNECTIONS
 
 // cria uma conexão
@@ -92,6 +95,9 @@ Api.db.posts.update(id, params, token)
 // deleta um post
 Api.db.posts.delete()
 
+// seta mídia do post
+Api.db.products.setImage(id, uri_da_imagem)
+
 // PRODUCTS
 
 // cria um produto
@@ -109,6 +115,9 @@ Api.db.products.update(id, params, token)
 // deleta um produto
 Api.db.products.delete(id, token)
 
+// seta foto do produto
+Api.db.products.setPhoto(id, uri_da_imagem)
+
 // NOTIFICATIONS
 
 // retorna uma notificação a partir do ID
@@ -119,9 +128,6 @@ Api.db.notifications.all(token)
 
 // deleta uma notificação
 Api.db.notifications.delete(id, token)
-
-// atualiza foto de perfil da empresa
-Api.db.vendors.updateProfilePhoto(id, uri_da_imagem)
 
 ````
 Fazendo login no back-end
