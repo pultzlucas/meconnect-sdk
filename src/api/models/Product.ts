@@ -1,6 +1,6 @@
 import { RequestAPI } from '../core'
 import File from './objects/File'
-import { ImageType } from './objects/ImageType'
+import { FileType } from './objects/FileType'
 
 interface Product {
     company_id: number
@@ -87,7 +87,7 @@ class ProductModel {
     }
 
     async setPhoto(id: number, photoUri: string) {
-        const file = new File('image.png', photoUri, ImageType.Png, 'image')
+        const file = new File('image.png', photoUri, FileType.Png, 'image')
         return RequestAPI({
             route: `${this.endpoint}/${id}/photo`,
             method: 'POST',

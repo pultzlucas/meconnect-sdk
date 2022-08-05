@@ -1,6 +1,6 @@
 import { RequestAPI } from '../core'
 import File from './objects/File'
-import { ImageType } from './objects/ImageType'
+import { FileType } from './objects/FileType'
 
 interface Post {
     company_id: number
@@ -78,9 +78,19 @@ class PostModel {
     }
 
     async setImage(id: number, photoUri: string) {
-        const file = new File('image.png', photoUri, ImageType.Png, 'image')
+        const file = new File('image.png', photoUri, FileType.Png, 'media')
         return RequestAPI({
-            route: `${this.endpoint}/${id}/image`,
+            route: `${this.endpoint}/${id}/media?type=image`,
+            method: 'POST',
+            token: true,
+            files: [file]
+        })
+    }
+
+    async setVideo(id: number, videoUri: string) {
+        const file = new File('video.mp4', videoUri, FileType.Video, 'media')
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/media?type=video`,
             method: 'POST',
             token: true,
             files: [file]
