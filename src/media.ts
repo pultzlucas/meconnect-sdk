@@ -10,7 +10,16 @@ export default {
             mediaTypes: ImagePicker.MediaTypeOptions.Images,
             allowsEditing: true,
             aspect,
-            quality: 0.5,
+            quality: 1,
+        });
+
+    },
+    pickVideo({ aspect }: ImageConfig) {
+        return ImagePicker.launchImageLibraryAsync({
+            mediaTypes: ImagePicker.MediaTypeOptions.Videos,
+            allowsEditing: true,
+            aspect,
+            quality: 1,
         });
     }
 }
