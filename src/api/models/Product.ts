@@ -34,6 +34,14 @@ class ProductModel {
         })
     }
 
+    async getTags(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/tags`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     async getByTags(tags: string[]) {
         return RequestAPI({
             route: `${this.endpoint}/bytags`,

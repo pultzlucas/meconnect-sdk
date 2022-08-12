@@ -34,6 +34,30 @@ class VendorModel {
         })
     }
 
+    async getPosts(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/posts`,
+            method: 'GET',
+            token: true
+        })
+    }
+
+    async getProducts(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/products`,
+            method: 'GET',
+            token: true
+        })
+    }
+
+    async getTags(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/tags`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     async getByTags(tags: string[]) {
         return RequestAPI({
             route: `${this.endpoint}/bytags`,

@@ -24,6 +24,14 @@ class CustomerModel {
         })
     }
 
+    async getNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     async all() {
         return RequestAPI({
             route: this.endpoint,
