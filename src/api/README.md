@@ -32,6 +32,9 @@ Api.db.customer.create(params)
 // retorna um cliente a partir do ID
 Api.db.customer.get(id_cliente) 
 
+// retorna as notificações de um cliente a partir do ID
+Api.db.customer.getNotifications(id_cliente) 
+
 // retorna todos os clientes do banco
 Api.db.customer.all()
 
@@ -48,6 +51,15 @@ Api.db.vendors.create(params)
 
 // retorna uma empresa a partir do ID
 Api.db.vendors.get(id_empresa)
+
+// retorna os posts de uma empresa a partir do ID
+Api.db.vendors.getPosts(id_empresa)
+
+// retorna os produtos de uma empresa a partir do ID
+Api.db.vendors.getProducts(id_empresa)
+
+// retorna as tags de uma empresa a partir do ID
+Api.db.vendors.getTags(id_empresa)
 
 // retorna todas as empresas do banco
 Api.db.vendors.all()
@@ -86,6 +98,9 @@ Api.db.posts.create(params)
 // retorna um post a partir do ID
 Api.db.posts.get(id_post)
 
+// retorna as tags de um post a partir do ID
+Api.db.posts.getTags(id_post)
+
 // retorna todos os posts do banco
 Api.db.posts.all()
 
@@ -105,6 +120,9 @@ Api.db.products.create(params)
 
 // retorna um produto a partir do ID
 Api.db.products.get(id_produto)
+
+// retorna as tags de um produto a partir do ID
+Api.db.products.getTags(id_produto)
 
 // retorna todos os produtos do banco
 Api.db.products.all()
