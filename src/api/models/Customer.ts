@@ -32,6 +32,14 @@ class CustomerModel {
         })
     }
 
+    async getConnections(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/connections`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     async all() {
         return RequestAPI({
             route: this.endpoint,
