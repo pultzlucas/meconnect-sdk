@@ -58,6 +58,14 @@ class VendorModel {
         })
     }
 
+    async getConnections(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/connections`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     async getByTags(tags: string[]) {
         return RequestAPI({
             route: `${this.endpoint}/bytags`,
