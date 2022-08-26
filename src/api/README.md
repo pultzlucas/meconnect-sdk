@@ -35,6 +35,9 @@ Api.db.customer.get(id_cliente)
 // retorna as notificações de um cliente a partir do ID
 Api.db.customer.getNotifications(id_cliente) 
 
+// retorna as conexões de um cliente a partir do ID
+Api.db.customer.getConnections(id_cliente) 
+
 // retorna todos os clientes do banco
 Api.db.customer.all()
 
