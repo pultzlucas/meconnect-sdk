@@ -1,11 +1,15 @@
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export default {
-    async set(token: string): Promise<void> {
-        AsyncStorage.setItem('@MCON_API_TOKEN', token)
+    set(token: string) {
+        return AsyncStorage.setItem('@MCON_API_TOKEN', token)
     },
 
-    async get() {
+    unset() {
+        return AsyncStorage.removeItem('@MCON_API_TOKEN')
+    },
+
+    get() {
         return AsyncStorage.getItem('@MCON_API_TOKEN')
     },
 
