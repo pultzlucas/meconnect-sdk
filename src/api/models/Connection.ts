@@ -20,6 +20,18 @@ class ConnectionModel {
         })
     }
 
+    async isConnected(customerId: number, vendorId: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/connected`,
+            method: 'GET',
+            token: true,
+            params: {
+                customer_id: customerId,
+                vendor_id: vendorId
+            }
+        })
+    }
+
     async get(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
