@@ -16,6 +16,7 @@ class ConnectionModel {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
+            token: true,
             params
         })
     }
