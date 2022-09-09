@@ -1,8 +1,8 @@
 import { RequestAPI } from '../core'
 
 interface Connection {
-    company_id: number
-    client_id: number
+    customer_id: number
+    vendor_id: number
 }
 
 class ConnectionModel {
