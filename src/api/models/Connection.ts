@@ -12,10 +12,19 @@ class ConnectionModel {
         this.endpoint = '/connections'
     }
 
-    async create(params: Connection) {
+    async connect(params: Connection) {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
+            params
+        })
+    }
+    
+    async disconnect(params: Connection) {
+        return RequestAPI({
+            route: this.endpoint,
+            method: 'DELETE',
+            token: true,
             params
         })
     }
@@ -53,14 +62,6 @@ class ConnectionModel {
             route: `${this.endpoint}/${id}`,
             method: 'PUT',
             params,
-            token: true
-        })
-    }
-
-    async delete(id: number) {
-        return RequestAPI({
-            route: `${this.endpoint}/${id}`,
-            method: 'DELETE',
             token: true
         })
     }
