@@ -79,7 +79,7 @@ class VendorModel {
 
     async getByCommercial(comm: number) {
         return RequestAPI({
-            route: `${this.endpoint}/bycomm/${comm}`,
+            route: `${this.endpoint}/bycom/${comm}`,
             method: 'GET',
             token: true
         })
