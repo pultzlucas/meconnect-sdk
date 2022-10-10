@@ -21,7 +21,8 @@ class PostModel {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
-            params
+            params,
+            token: true
         })
     }
 
