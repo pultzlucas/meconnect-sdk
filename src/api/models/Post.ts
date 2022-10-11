@@ -89,7 +89,7 @@ class PostModel {
     async setImage(id: number, photoUri: string) {
         const file = new File('image.png', photoUri, FileType.Png, 'media')
         return RequestAPI({
-            route: `${this.endpoint}/${id}/media?type=image`,
+            route: `${this.endpoint}/${id}/media?media_type=image`,
             method: 'POST',
             token: true,
             files: [file]
@@ -99,7 +99,7 @@ class PostModel {
     async setVideo(id: number, videoUri: string) {
         const file = new File('video.mp4', videoUri, FileType.Video, 'media')
         return RequestAPI({
-            route: `${this.endpoint}/${id}/media?type=video`,
+            route: `${this.endpoint}/${id}/media?media_type=video`,
             method: 'POST',
             token: true,
             files: [file]
