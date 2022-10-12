@@ -1,16 +1,16 @@
-import AsyncStorage from '@react-native-async-storage/async-storage'
+import * as SecureStore from 'expo-secure-store';
 
 export default {
     set(token: string) {
-        return AsyncStorage.setItem('@MCON_API_TOKEN', token)
+        return SecureStore.setItemAsync('MeconnectApiToken', token)
     },
 
     unset() {
-        return AsyncStorage.removeItem('@MCON_API_TOKEN')
+        return SecureStore.deleteItemAsync('MeconnectApiToken')
     },
 
     get() {
-        return AsyncStorage.getItem('@MCON_API_TOKEN')
+        return SecureStore.getItemAsync('MeconnectApiToken')
     },
 
     async isset() {
