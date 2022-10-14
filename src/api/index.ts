@@ -1,4 +1,4 @@
-import login from "./models/Login";
+import * as auth from "./models/Auth";
 import PostModel from "./models/Post";
 import ProductModel from './models/Product';
 import ConnectionModel from "./models/Connection";
@@ -12,7 +12,7 @@ import * as config from './config'
 export default {
     config,
     token,
-    login,
+    auth,
     db: {
         users: {
             all: UserModel.allUsers,
