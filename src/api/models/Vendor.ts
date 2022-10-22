@@ -10,7 +10,7 @@ class VendorModel {
         this.endpoint = '/users/vendor'
     }
 
-    async create(params: Vendor) {
+    create(params: Vendor) {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
@@ -18,7 +18,7 @@ class VendorModel {
         })
     }
 
-    async all() {
+    all() {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
@@ -26,7 +26,7 @@ class VendorModel {
         })
     }
 
-    async get(id: number) {
+    get(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'GET',
@@ -34,7 +34,7 @@ class VendorModel {
         })
     }
 
-    async getPosts(id: number) {
+    getPosts(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/posts`,
             method: 'GET',
@@ -42,7 +42,7 @@ class VendorModel {
         })
     }
 
-    async getProducts(id: number) {
+    getProducts(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/products`,
             method: 'GET',
@@ -50,7 +50,7 @@ class VendorModel {
         })
     }
 
-    async getTags(id: number) {
+    getTags(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/tags`,
             method: 'GET',
@@ -58,7 +58,7 @@ class VendorModel {
         })
     }
 
-    async getConnections(id: number) {
+    getConnections(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/connections`,
             method: 'GET',
@@ -66,7 +66,7 @@ class VendorModel {
         })
     }
 
-    async getByTags(tags: string[]) {
+    getByTags(tags: string[]) {
         return RequestAPI({
             route: `${this.endpoint}/bytags`,
             method: 'GET',
@@ -77,7 +77,7 @@ class VendorModel {
         })
     }
 
-    async getByCommercial(comm: number) {
+    getByCommercial(comm: number) {
         return RequestAPI({
             route: `${this.endpoint}/bycom/${comm}`,
             method: 'GET',
@@ -85,7 +85,7 @@ class VendorModel {
         })
     }
 
-    async getByCep(cep: string) {
+    getByCep(cep: string) {
         return RequestAPI({
             route: `${this.endpoint}/bycep/${cep}`,
             method: 'GET',
@@ -93,15 +93,24 @@ class VendorModel {
         })
     }
 
-    async getByCnpj(cnpj: string) {
+    getByCnpj(cnpj: string) {
         return RequestAPI({
             route: `${this.endpoint}/bycnpj/${cnpj}`,
             method: 'GET',
             token: true
         })
+    
     }
 
-    async update(id: number, params: any) {
+    getTops(limit: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/tops/${limit}`,
+            method: 'GET',
+            token: true
+        })
+    }
+
+    update(id: number, params: any) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'PUT',
@@ -110,7 +119,7 @@ class VendorModel {
         })
     }
 
-    async delete(id: number) {
+    delete(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'DELETE',
@@ -120,7 +129,7 @@ class VendorModel {
 
     // Media routes
 
-    async setProfilePhoto(id: number, photoUri: string) {
+    setProfilePhoto(id: number, photoUri: string) {
         const file = new File('image.png', photoUri, FileType.Png, 'image')
         return RequestAPI({
             route: `${this.endpoint}/${id}/photo`,
@@ -130,7 +139,7 @@ class VendorModel {
         })
     }
 
-    async setProfileBanner(id: number, photoUri: string) {
+    setProfileBanner(id: number, photoUri: string) {
         const file = new File('image.png', photoUri, FileType.Png, 'image')
         return RequestAPI({
             route: `${this.endpoint}/${id}/banner`,

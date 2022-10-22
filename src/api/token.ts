@@ -2,15 +2,15 @@ import * as SecureStore from 'expo-secure-store';
 
 export default {
     set(token: string) {
-        return SecureStore.setItemAsync('MeconnectApiToken', token)
+        return SecureStore.setItemAsync('ApiToken', token)
     },
 
     unset() {
-        return SecureStore.deleteItemAsync('MeconnectApiToken')
+        return SecureStore.deleteItemAsync('ApiToken')
     },
 
     get() {
-        return SecureStore.getItemAsync('MeconnectApiToken')
+        return SecureStore.getItemAsync('ApiToken')
     },
 
     async isset() {
