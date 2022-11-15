@@ -32,7 +32,7 @@ class ConnectionModel {
 
     async getInfo(customerId: number, vendorId: number) {
         return RequestAPI({
-            route: `${this.endpoint}/connectionInfo`,
+            route: `${this.endpoint}/info`,
             method: 'GET',
             token: true,
             params: {
