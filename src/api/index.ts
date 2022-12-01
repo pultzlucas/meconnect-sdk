@@ -8,6 +8,7 @@ import UserModel from "./models/User";
 import CustomerModel from "./models/Customer";
 import VendorModel from "./models/Vendor";
 import * as config from './config'
+import MailModel from "./models/Mail";
 
 export default {
     config,
@@ -22,6 +23,7 @@ export default {
         posts: new PostModel(),
         products: new ProductModel(),
         connections: new ConnectionModel(),
-        notifications: new NotificationModel()
+        notifications: new NotificationModel(),
+        mail: new MailModel()
     }
 }
