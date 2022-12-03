@@ -1,6 +1,6 @@
 export const Config = {
     // apiDomain: 'https://meconnect-api.herokuapp.com/api'
-    apiDomain: 'http://44.202.106.85/api'
+    apiDomain: 'http://15.228.128.65/api'
 }
 
 export function setApiDomain(domain: string) {
