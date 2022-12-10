@@ -121,6 +121,14 @@ class PostModel {
             token: true
         })
     }
+
+    async wasLikedBy(userId: number, postId: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${postId}/waslikedby/${userId}`,
+            method: 'GET',
+            token: true
+        })
+    }
 }
 
 export default PostModel
