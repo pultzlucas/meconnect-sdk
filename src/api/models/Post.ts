@@ -105,6 +105,22 @@ class PostModel {
             files: [file]
         })
     }
+
+    async like(userId: number, postId: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${postId}/like?user_id=${userId}`,
+            method: 'POST',
+            token: true
+        })
+    }
+
+    async unlike(userId: number, postId: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${postId}/unlike?user_id=${userId}`,
+            method: 'DELETE',
+            token: true
+        })
+    }
 }
 
 export default PostModel
