@@ -102,6 +102,14 @@ class VendorModel {
     
     }
 
+    getNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     getTops(limit: number) {
         return RequestAPI({
             route: `${this.endpoint}/tops/${limit}`,

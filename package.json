@@ -1,6 +1,6 @@
 {
   "name": "meconnect-sdk",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "description": "MeConnect development kit",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
