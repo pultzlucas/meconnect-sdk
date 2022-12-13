@@ -10,6 +10,8 @@ class VendorModel {
         this.endpoint = '/users/vendor'
     }
 
+    // POST
+
     create(params: Vendor) {
         return RequestAPI({
             route: this.endpoint,
@@ -17,6 +19,8 @@ class VendorModel {
             params
         })
     }
+
+    // GET
 
     all() {
         return RequestAPI({
@@ -102,6 +106,14 @@ class VendorModel {
         })
     }
 
+    getUnseenNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications/unseen`,
+            method: 'GET',
+            token: true
+        })
+    }
+
     getTops(limit: number) {
         return RequestAPI({
             route: `${this.endpoint}/tops/${limit}`,
@@ -109,6 +121,8 @@ class VendorModel {
             token: true
         })
     }
+
+    // PUT
 
     update(id: number, params: any) {
         return RequestAPI({
@@ -118,6 +132,16 @@ class VendorModel {
             token: true
         })
     }
+
+    cleanUnseenNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications/unseen`,
+            method: 'PUT',
+            token: true
+        })
+    }
+
+    // DELETE
 
     delete(id: number) {
         return RequestAPI({

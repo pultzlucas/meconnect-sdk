@@ -8,7 +8,7 @@ class CustomerModel {
         this.endpoint = '/users/customer'
     }
 
-    async create(params: User) {
+    create(params: User) {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
@@ -16,7 +16,7 @@ class CustomerModel {
         })
     }
 
-    async get(id: number) {
+    get(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'GET',
@@ -24,7 +24,7 @@ class CustomerModel {
         })
     }
 
-    async getNotifications(id: number) {
+    getNotifications(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/notifications`,
             method: 'GET',
@@ -32,7 +32,15 @@ class CustomerModel {
         })
     }
 
-    async getConnections(id: number) {
+    getUnseenNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications/unseen`,
+            method: 'GET',
+            token: true
+        })
+    }
+
+    getConnections(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}/connections`,
             method: 'GET',
@@ -40,7 +48,7 @@ class CustomerModel {
         })
     }
 
-    async all() {
+    all() {
         return RequestAPI({
             route: this.endpoint,
             method: 'POST',
@@ -48,7 +56,7 @@ class CustomerModel {
         })
     }
 
-    async update(id: number, params: any) {
+    update(id: number, params: any) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'PUT',
@@ -57,7 +65,15 @@ class CustomerModel {
         })
     }
 
-    async delete(id: number) {
+    cleanUnseenNotifications(id: number) {
+        return RequestAPI({
+            route: `${this.endpoint}/${id}/notifications/unseen`,
+            method: 'PUT',
+            token: true
+        })
+    }
+
+    delete(id: number) {
         return RequestAPI({
             route: `${this.endpoint}/${id}`,
             method: 'DELETE',
